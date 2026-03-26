@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Devis — Moon Formations</title>
+  <meta name="description" content="Contactez Moon Formations pour un devis de formation ou une prise de rendez-vous. Organisme certifié Qualiopi. Financement OPCO disponible.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="Moon Formations" class="nav-logo-img"></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="catalogue.html" class="nav-link">Formations</a></li>
+        <li><a href="entreprises.html" class="nav-link">Entreprises</a></li>
+        <li><a href="financement.html" class="nav-link">Financement</a></li>
+        <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+        <li><a href="apropos.html" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-cta">Demander un devis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding:8rem 0 4rem; background:var(--noir);">
+    <div class="container">
+      <span class="section-tag" style="color:var(--terracotta-light); border-color:var(--terracotta-dark)">Contact</span>
+      <h1 style="color:var(--blanc);">Parlons de<br><em>votre projet</em></h1>
+      <p style="color:var(--gris-light); max-width:550px; margin-top:1rem;">Décrivez-nous vos besoins et nous vous recontactons sous 24h avec une proposition adaptée à votre contexte.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h2>Nous sommes<br><em>à votre écoute</em></h2>
+          <p>Que vous souhaitiez former une équipe, un groupe ou un collaborateur, Moon Formations vous accompagne de A à Z dans votre projet de formation.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="cd-icon">✉</div>
+              <div class="cd-text">
+                <strong>Email</strong>
+                <span><a href="mailto:contact@moonformations.fr" style="color:var(--terracotta)">contact@moonformations.fr</a></span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon">☎</div>
+              <div class="cd-text">
+                <strong>Téléphone</strong>
+                <span><a href="tel:+33756803070" style="color:var(--noir)">07 56 80 30 70</a></span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon">⏰</div>
+              <div class="cd-text">
+                <strong>Disponibilité</strong>
+                <span>Lundi – Vendredi, 9h – 18h</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="cd-icon">⚡</div>
+              <div class="cd-text">
+                <strong>Délai de réponse</strong>
+                <span>Sous 24h ouvrées</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:3rem; padding:2rem; background:var(--beige); border-radius:4px;">
+            <h3 style="font-size:1.2rem; margin-bottom:0.75rem;">Certifié <em>Qualiopi</em></h3>
+            <p style="font-size:0.875rem;">Nos formations peuvent être financées par votre OPCO. Nous gérons les démarches administratives avec vous.</p>
+            <a href="financement.html" style="font-size:0.85rem; color:var(--terracotta); font-weight:500; display:block; margin-top:1rem;">En savoir plus →</a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="52484069-1b33-4d59-9be3-165de24ac5d8">
+            <input type="hidden" name="subject" value="Nouvelle demande de formation — Moon Formations">
+            <input type="hidden" name="from_name" value="Moon Formations Site Web">
+            <input type="hidden" name="redirect" value="merci.html">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="nom">Nom *</label>
+                <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="prenom">Prénom *</label>
+                <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Votre prénom" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="entreprise">Entreprise *</label>
+                <input type="text" id="entreprise" name="entreprise" class="form-input" placeholder="Nom de votre entreprise" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="siret">Numéro SIRET *</label>
+                <input type="text" id="siret" name="siret" class="form-input" placeholder="XXX XXX XXX XXXXX" required pattern="\d{14}" title="14 chiffres sans espaces">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="+33 6 XX XX XX XX">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formation">Formation souhaitée</label>
+              <select id="formation" name="formation" class="form-select">
+                <option value="">Choisir une formation (optionnel)</option>
+                <option>Négociation commerciale avancée</option>
+                <option>Prospection B2B & LinkedIn</option>
+                <option>Leadership & Management</option>
+                <option>Intelligence artificielle pour PME</option>
+                <option>Gestion des conflits</option>
+                <option>Neuromarketing</option>
+                <option>Autre — à préciser dans le message</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="effectif">Effectif à former</label>
+              <select id="effectif" name="effectif" class="form-select">
+                <option value="">Nombre de personnes</option>
+                <option>1 à 5 personnes</option>
+                <option>6 à 12 personnes</option>
+                <option>13 à 25 personnes</option>
+                <option>Plus de 25 personnes</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="besoin">Décrivez votre besoin *</label>
+              <textarea id="besoin" name="besoin" class="form-textarea" placeholder="Décrivez votre projet de formation : contexte, objectifs, contraintes, délais souhaités…" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label style="display:flex; gap:0.75rem; align-items:flex-start; cursor:pointer; font-size:0.8rem; color:var(--gris);">
+                <input type="checkbox" required style="margin-top:3px; accent-color:var(--terracotta); flex-shrink:0;">
+                J'accepte que mes données soient traitées par Moon Formations pour répondre à ma demande. Voir notre <a href="confidentialite.html" style="color:var(--terracotta)">politique de confidentialité</a>.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit btn-lg">Envoyer ma demande</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RDV SECTION -->
+  <section class="rdv-section" id="rdv">
+    <div class="container">
+      <div style="text-align:center; max-width:600px; margin:0 auto;">
+        <span class="section-tag">Rendez-vous</span>
+        <h2>Préférez-vous un<br><em>rendez-vous direct ?</em></h2>
+        <p style="margin:1.5rem 0 2rem;">Réservez un créneau de 30 minutes avec l'un de nos conseillers pour discuter de votre projet de formation.</p>
+        <a href="mailto:contact@moonformations.fr?subject=Prise de rendez-vous formation" class="btn btn-primary btn-lg">Prendre rendez-vous par email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="logo.png" alt="Moon Formations" class="footer-logo-img"></div>
+          <p>Organisme de formation certifié Qualiopi.</p>
+          <div class="footer-qualiopi">✦ Certifié Qualiopi</div>
+        </div>
+        <div class="footer-col"><h4>Formations</h4><ul><li><a href="catalogue.html">Catalogue</a></li></ul></div>
+        <div class="footer-col"><h4>Entreprises</h4><ul><li><a href="entreprises.html">Intra-entreprise</a></li><li><a href="financement.html">Financement</a></li></ul></div>
+        <div class="footer-col"><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">CGV</a></li><li><a href="confidentialite.html">Conf

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue de formations — Moon Formations</title>
+  <meta name="description" content="Explorez notre catalogue de plus de 250 formations professionnelles : négociation, management, IA, soft skills, digital. Certifié Qualiopi, financement OPCO.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-moon">MOON</span>
+        <span class="logo-formations">FORMATIONS</span>
+        <span class="logo-group">S&J Group</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="catalogue.html" class="nav-link active">Formations</a></li>
+        <li><a href="entreprises.html" class="nav-link">Entreprises</a></li>
+        <li><a href="financement.html" class="nav-link">Financement</a></li>
+        <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+        <li><a href="apropos.html" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-cta">Demander un devis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="catalogue-hero">
+    <div class="container">
+      <span class="section-tag" style="color:var(--terracotta-light); border-color:var(--terracotta-dark)">Catalogue 2025</span>
+      <h1>250+ formations<br><em>professionnelles</em></h1>
+      <p>Des formations concrètes, opérationnelles et finançables par vos OPCO. Filtrez par domaine, durée ou modalité pour trouver la formation idéale.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="catalogue-layout">
+
+      <!-- FILTERS SIDEBAR -->
+      <aside class="filters-panel">
+        <div class="filter-group">
+          <h4>Recherche</h4>
+          <input type="text" class="filter-search" placeholder="Rechercher une formation…" aria-label="Rechercher">
+        </div>
+
+        <div class="filter-group">
+          <h4>Domaine</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="commercial"> Développement commercial <span class="filter-count">45</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="marketing"> Marketing & Neuromarketing <span class="filter-count">30</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="management"> Management <span class="filter-count">50</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="softskills"> Soft Skills <span class="filter-count">40</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="digital"> Digital & IA <span class="filter-count">35</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="organisation"> Organisation & Performance <span class="filter-count">50</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Modalité</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="presentiel"> Présentiel
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="distanciel"> Distanciel
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="mixte"> Mixte
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Durée</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="1j"> 1 jour
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="2j"> 2 jours
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="3j"> 3 jours
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="4j+"> 4 jours et +
+            </label>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; padding:1.5rem; background:var(--beige); border-radius:4px;">
+          <p style="font-size:0.8rem; margin-bottom:1rem;">Besoin d'une formation sur mesure ?</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center; font-size:0.8rem; padding:0.7rem;">Nous contacter</a>
+        </div>
+      </aside>
+
+      <!-- FORMATIONS LIST -->
+      <main>
+        <div class="catalogue-header">
+          <span class="catalogue-count">250 formations trouvées</span>
+          <select class="catalogue-sort" aria-label="Trier par">
+            <option>Les plus demandées</option>
+            <option>Alphabétique</option>
+            <option>Durée croissante</option>
+            <option>Durée décroissante</option>
+          </select>
+        </div>
+
+        <div class="formations-grid" id="formationsGrid">
+
+          <!-- COMMERCIAL -->
+          <article class="formation-card" data-category="commercial">
+            <span class="card-category">Développement commercial</span>
+            <h3 class="card-title">Négociation commerciale avancée</h3>
+            <p class="card-description">Maîtrisez les techniques de négociation pour conclure plus de ventes, maintenir vos marges et créer des relations durables.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Équipes commerciales</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=negociation" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-negociation.html" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="commercial">
+            <span class="card-category">Développement commercial</span>
+            <h3 class="card-title">Prospection B2B & LinkedIn</h3>
+            <p class="card-description">Développez un pipeline commercial solide avec des méthodes modernes de prospection, incluant les réseaux sociaux professionnels.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Commerciaux</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=prospection-b2b" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-prospection.html" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="commercial">
+            <span class="card-category">Développement commercial</span>
+            <h3 class="card-title">Techniques de closing</h3>
+            <p class="card-description">Apprenez à conclure vos ventes avec confiance. Techniques de closing éprouvées pour transformer vos prospects en clients.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 1 jour</span>
+              <span class="card-meta-item">📍 Présentiel / Distanciel</span>
+              <span class="card-meta-item">👥 Commerciaux</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=closing" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=closing" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="commercial">
+            <span class="card-category">Développement commercial</span>
+            <h3 class="card-title">Relation client d'excellence</h3>
+            <p class="card-description">Développez une culture client au sein de vos équipes pour fidéliser et maximiser la valeur de chaque relation commerciale.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Toutes équipes</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=relation-client" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=relation-client" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="commercial">
+            <span class="card-category">Développement commercial</span>
+            <h3 class="card-title">Fidélisation et vente additionnelle</h3>
+            <p class="card-description">Maîtrisez les stratégies de rétention client et d'upsell pour maximiser la valeur vie de chaque client.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Mixte</span>
+              <span class="card-meta-item">👥 Commerciaux, Service client</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=fidelisation" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=fidelisation" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="commercial">
+            <span class="card-category">Développement commercial</span>
+            <h3 class="card-title">Performance commerciale globale</h3>
+            <p class="card-description">Programme complet de montée en compétences commerciales : de la prospection à la fidélisation, en passant par la négociation.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 5 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Équipes commerciales</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=performance-commerciale" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=performance-commerciale" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <!-- MARKETING -->
+          <article class="formation-card" data-category="marketing">
+            <span class="card-category">Marketing & Neuromarketing</span>
+            <h3 class="card-title">Neuromarketing & influence</h3>
+            <p class="card-description">Comprenez les mécanismes cognitifs de la décision d'achat. Utilisez les biais cognitifs pour améliorer vos messages commerciaux.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Marketing, Commercial</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=neuromarketing" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-neuromarketing.html" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="marketing">
+            <span class="card-category">Marketing & Neuromarketing</span>
+            <h3 class="card-title">Psychologie de la vente</h3>
+            <p class="card-description">Maîtrisez les leviers psychologiques qui influencent la décision d'achat et adaptez votre discours commercial en conséquence.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Mixte</span>
+              <span class="card-meta-item">👥 Commerciaux</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=psychologie-vente" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=psychologie-vente" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="marketing">
+            <span class="card-category">Marketing & Neuromarketing</span>
+            <h3 class="card-title">Persuasion & argumentation</h3>
+            <p class="card-description">Structurez un discours percutant et maîtrisez les techniques de persuasion pour convaincre en toutes circonstances.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 1 jour</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=persuasion" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=persuasion" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <!-- MANAGEMENT -->
+          <article class="formation-card" data-category="management">
+            <span class="card-category">Management</span>
+            <h3 class="card-title">Leadership & Management d'équipe</h3>
+            <p class="card-description">Développez votre posture de leader et créez une équipe engagée, performante et soudée autour d'objectifs communs.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 3 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Managers, Dirigeants</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=leadership" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-leadership.html" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="management">
+            <span class="card-category">Management</span>
+            <h3 class="card-title">Gestion des conflits en entreprise</h3>
+            <p class="card-description">Transformez les situations conflictuelles en opportunités de dialogue. Outils et méthodes pour prévenir et résoudre les conflits.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Managers, RH</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=conflits" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-conflits.html" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="management">
+            <span class="card-category">Management</span>
+            <h3 class="card-title">Management intergénérationnel</h3>
+            <p class="card-description">Apprenez à manager des équipes multigénérationnelles, à valoriser les différences et à créer une cohésion durable.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel / Distanciel</span>
+              <span class="card-meta-item">👥 Managers</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=management-intergenerationnel" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=management-intergenerationnel" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="management">
+            <span class="card-category">Management</span>
+            <h3 class="card-title">Manager la performance de son équipe</h3>
+            <p class="card-description">Pilotez la performance individuelle et collective avec des outils concrets : entretiens, objectifs SMART, feedback constructif.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Managers</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=manager-performance" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=manager-performance" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="management">
+            <span class="card-category">Management</span>
+            <h3 class="card-title">Manager à distance</h3>
+            <p class="card-description">Adaptez votre management au télétravail et aux équipes hybrides. Communication, suivi et motivation à distance.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Distanciel</span>
+              <span class="card-meta-item">👥 Managers</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=manager-distance" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=manager-distance" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <!-- SOFT SKILLS -->
+          <article class="formation-card" data-category="softskills">
+            <span class="card-category">Soft Skills</span>
+            <h3 class="card-title">Communication professionnelle</h3>
+            <p class="card-description">Améliorez votre communication interpersonnelle, écrite et orale pour des échanges plus efficaces et professionnels.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=communication" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=communication" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="softskills">
+            <span class="card-category">Soft Skills</span>
+            <h3 class="card-title">Gestion du stress et des émotions</h3>
+            <p class="card-description">Développez votre capacité à gérer le stress professionnel et à maintenir votre équilibre émotionnel dans les situations difficiles.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Mixte</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=gestion-stress" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=gestion-stress" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="softskills">
+            <span class="card-category">Soft Skills</span>
+            <h3 class="card-title">Intelligence émotionnelle</h3>
+            <p class="card-description">Développez votre QE pour améliorer vos relations professionnelles, votre leadership et votre prise de décision.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Managers, Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=intelligence-emotionnelle" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=intelligence-emotionnelle" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="softskills">
+            <span class="card-category">Soft Skills</span>
+            <h3 class="card-title">Prise de parole en public</h3>
+            <p class="card-description">Surmontez le trac et prenez la parole avec assurance. Techniques de présentation, storytelling et gestion du stress scénique.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=prise-de-parole" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=prise-de-parole" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="softskills">
+            <span class="card-category">Soft Skills</span>
+            <h3 class="card-title">Confiance en soi professionnelle</h3>
+            <p class="card-description">Renforcez votre estime de vous, affirmez vos idées avec assertivité et développez votre impact dans les interactions professionnelles.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=confiance-soi" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=confiance-soi" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <!-- DIGITAL -->
+          <article class="formation-card" data-category="digital">
+            <span class="card-category">Digital & IA</span>
+            <h3 class="card-title">IA pour les PME</h3>
+            <p class="card-description">Intégrez l'intelligence artificielle dans vos processus pour gagner en productivité, réduire les coûts et améliorer votre compétitivité.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 3 jours</span>
+              <span class="card-meta-item">📍 Présentiel / Distanciel</span>
+              <span class="card-meta-item">👥 Dirigeants, Managers</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=ia-pme" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-ia.html" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="digital">
+            <span class="card-category">Digital & IA</span>
+            <h3 class="card-title">Transformation digitale de l'entreprise</h3>
+            <p class="card-description">Pilotez la transformation numérique de votre organisation : stratégie, outils, conduite du changement et culture digitale.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 3 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Dirigeants, DRH</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=transformation-digitale" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=transformation-digitale" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="digital">
+            <span class="card-category">Digital & IA</span>
+            <h3 class="card-title">ChatGPT & outils IA au quotidien</h3>
+            <p class="card-description">Utilisez ChatGPT et les outils IA pour automatiser vos tâches quotidiennes, rédiger, créer et analyser plus rapidement.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 1 jour</span>
+              <span class="card-meta-item">📍 Distanciel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=chatgpt" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=chatgpt" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="digital">
+            <span class="card-category">Digital & IA</span>
+            <h3 class="card-title">Automatisation des processus</h3>
+            <p class="card-description">Identifiez et automatisez vos processus métiers grâce aux outils no-code et IA pour gagner du temps et réduire les erreurs.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Distanciel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=automatisation" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=automatisation" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <!-- ORGANISATION -->
+          <article class="formation-card" data-category="organisation">
+            <span class="card-category">Organisation & Performance</span>
+            <h3 class="card-title">Gestion du temps & priorités</h3>
+            <p class="card-description">Maîtrisez votre agenda, priorisez efficacement et gagnez en productivité grâce à des méthodes éprouvées.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 1 jour</span>
+              <span class="card-meta-item">📍 Présentiel / Distanciel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=gestion-temps" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=gestion-temps" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="organisation">
+            <span class="card-category">Organisation & Performance</span>
+            <h3 class="card-title">Gestion de projet</h3>
+            <p class="card-description">Maîtrisez les fondamentaux de la gestion de projet : planification, pilotage, gestion des risques et communication.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 3 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Chefs de projet, Managers</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=gestion-projet" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=gestion-projet" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="organisation">
+            <span class="card-category">Organisation & Performance</span>
+            <h3 class="card-title">Productivité & méthodes de travail</h3>
+            <p class="card-description">Adoptez des habitudes de travail efficaces : GTD, Pomodoro, Deep Work… Adaptées au contexte professionnel moderne.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 1 jour</span>
+              <span class="card-meta-item">📍 Distanciel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=productivite" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=productivite" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+          <article class="formation-card" data-category="organisation">
+            <span class="card-category">Organisation & Performance</span>
+            <h3 class="card-title">Développement personnel professionnel</h3>
+            <p class="card-description">Identifiez vos forces, définissez votre cap professionnel et développez une vision claire de votre évolution.</p>
+            <div class="card-meta">
+              <span class="card-meta-item">⏱ 2 jours</span>
+              <span class="card-meta-item">📍 Présentiel</span>
+              <span class="card-meta-item">👥 Tous profils</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html?formation=developpement-personnel" class="card-btn-primary">Demander un devis</a>
+              <a href="formation-detail.html?id=developpement-personnel" class="card-btn-secondary">Détails</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- LOAD MORE -->
+        <div style="text-align:center; margin-top:3rem; padding-top:3rem; border-top:1px solid var(--beige-dark);">
+          <p style="font-size:0.875rem; color:var(--gris); margin-bottom:1.5rem;">Affichage de 24 formations sur 250+</p>
+          <a href="contact.html" class="btn btn-secondary">Voir tout le catalogue — Nous contacter</a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Vous ne trouvez pas<br><em>ce que vous cherchez ?</em></h2>
+        <p>Nous créons des programmes sur mesure adaptés à vos besoins spécifiques.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Discuter de votre projet</a>
+          <a href="entreprises.html" class="btn btn-ghost">Formations intra-entreprise</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="logo-moon">MOON</span> <span class="logo-formations">FORMATIONS</span></div>
+          <p>Organisme de formation certifié Qualiopi.</p>
+          <div class="footer-qualiopi">✦ Certifié Qualiopi</div>
+        </div>
+        <div class="footer-col">
+          <h4>Formations</h4>
+          <ul>
+            <li><a href="catalogue.html?cat=commercial">Commercial</a></li>
+            <li><a href="catalogue.html?cat=management">Management</a></li>
+            <li><a href="catalogue.html?cat=digital">Digital & IA</a></li>
+            <li><a href="catalogue.html?cat=softskills">Soft Skills</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Entreprises</h4>
+          <ul>
+            <li><a href="entreprises.html">Intra-entreprise</a></li>
+            <li><a href="financement.html">Financement OPCO</a></li>
+            <li><a href="qualite.html">Démarche Qualiopi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Moon Formations — S&J Group. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
